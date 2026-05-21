@@ -1,0 +1,50 @@
+{
+    "mail_claim": {
+        "next": [
+            "bootstrap_login",
+            "mail_check_home"
+        ]
+    },
+    "mail_check_home": {
+        "recognition": "TemplateMatch",
+        "template": "home.png",
+        "roi": [
+            902,
+            90,
+            318,
+            81
+        ],
+        "threshold": 0.75,
+        "rate_limit": 2000,
+        "next": [
+            "mail_enter"
+        ]
+    },
+    "mail_enter": {
+        "recognition": "TemplateMatch",
+        "template": "mail.png",
+        "roi": [
+            1060,
+            88,
+            80,
+            81
+        ],
+        "threshold": 0.75,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "mail_take_all"
+        ]
+    },
+    "mail_take_all": {
+        "recognition": "OCR",
+        "expected": "全部领取",
+        "roi": [
+            858,
+            524,
+            187,
+            50
+        ],
+        "action": "Click"
+    }
+}
