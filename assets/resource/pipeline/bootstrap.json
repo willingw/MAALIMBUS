@@ -1,0 +1,29 @@
+{
+    "bootstrap_start": {
+        "next": [
+            "bootstrap_login",
+            "bootstrap_check_home"
+        ]
+    },
+    "bootstrap_login": {
+        "recognition": "OCR",
+        "expected": "TOUCH TO START",
+        "action": "Click",
+        "next": [
+            "bootstrap_check_home"
+        ],
+        "post_delay": 10000
+    },
+    "bootstrap_check_home": {
+        "recognition": "TemplateMatch",
+        "template": "home.png",
+        "roi": [
+            902,
+            90,
+            318,
+            81
+        ],
+        "threshold": 0.75,
+        "rate_limit": 2000
+    }
+}
