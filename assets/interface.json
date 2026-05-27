@@ -50,6 +50,10 @@
         {
             "name": "领取邮件",
             "entry": "mail_claim"
+        },
+        {
+            "name": "脑啡肽换取",
+            "entry": "enkephalin"
         }
     ],
     "option": {}
