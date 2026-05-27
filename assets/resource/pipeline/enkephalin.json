@@ -1,0 +1,89 @@
+{
+    "enkephalin": {
+        "next": [
+            "bootstrap_login",
+            "enkephalin_check_home"
+        ]
+    },
+    "enkephalin_check_home": {
+        "recognition": "TemplateMatch",
+        "template": "common/home.png",
+        "roi": [
+            902,
+            90,
+            318,
+            81
+        ],
+        "threshold": 0.75,
+        "rate_limit": 2000,
+        "next": [
+            "enkephalin_click_in"
+        ]
+    },
+    "enkephalin_click_in": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "enkephalin/left.png",
+            "enkephalin/right.png"
+        ],
+        "threshold": 0.7,
+        "roi": [
+            287,
+            628,
+            188,
+            63
+        ],
+        "action": "Click",
+        "target": [
+            376,
+            656,
+            14,
+            13
+        ],
+        "next": [
+            "enkephalin_change"
+        ]
+    },
+    "enkephalin_change": {
+        "recognition": "TemplateMatch",
+        "template": "enkephalin/change_max.png",
+        "roi": [
+            767,
+            308,
+            46,
+            44
+        ],
+        "action": "Click",
+        "next": [
+            "enkephalin_yes"
+        ]
+    },
+    "enkephalin_yes": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            741,
+            513,
+            47,
+            33
+        ],
+        "action": "Click",
+        "next": [
+            "enkephalin_cancel"
+        ]
+    },
+    "enkephalin_cancel": {
+        "recognition": "OCR",
+        "expected": "取消",
+        "roi": [
+            501,
+            516,
+            58,
+            30
+        ],
+        "action": "Click",
+        "next": [
+            "bootstrap_check_home"
+        ]
+    }
+}
