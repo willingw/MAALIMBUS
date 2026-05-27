@@ -16,7 +16,7 @@
     },
     "bootstrap_check_home": {
         "recognition": "TemplateMatch",
-        "template": "home.png",
+        "template": "common/home.png",
         "roi": [
             902,
             90,

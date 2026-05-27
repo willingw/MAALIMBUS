@@ -7,7 +7,7 @@
     },
     "mail_check_home": {
         "recognition": "TemplateMatch",
-        "template": "home.png",
+        "template": "common/home.png",
         "roi": [
             902,
             90,
@@ -22,7 +22,7 @@
     },
     "mail_enter": {
         "recognition": "TemplateMatch",
-        "template": "mail.png",
+        "template": "mail/mail.png",
         "roi": [
             1060,
             88,
